@@ -6,19 +6,19 @@
 
 2. **Instale as dependencias do projeto**
 
-### composer install
+#### composer install
 
 3. **Faça o download do XAMPP**
-### inicie os servidores 
+#### inicie os servidores 
 
 4. **Crie o Banco de Dados**
-### php artisan create:db
+#### php artisan create:db
 
-### comando para fazer o drop do db: 
-### php artisan run:drop-db
+#### comando para fazer o drop do db: 
+#### php artisan run:drop-db
 
 5. **Rode a migration para criação da tabela lead**
-### php artisan migrate
+#### php artisan migrate
 
 6. **Comando para iniciar o projeto laravel**
-### Execute o Projeto
+#### php artisan serve
