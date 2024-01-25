@@ -22,3 +22,8 @@
 
 6. **Comando para iniciar o projeto laravel**
 #### php artisan serve
+
+7. **Documentação api**
+### disponivel no arquivo openapi.yaml copiar e colar no editor swagger
+
+![Doc Api](doc.png)

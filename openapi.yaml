@@ -1,0 +1,100 @@
+openapi: 3.0.0
+info:
+  title: API Cond
+  description: Api exposição imobiliária
+  version: 1.0.0
+paths:
+  /api/lead:
+    get:
+      tags:
+        - Lead
+      summary: Lista todos os leads
+      operationId: 3dc616a61eacfedcb301f11adb7fcaa1
+      responses:
+        '200':
+          description: Lista a tabela dentro do banco de dados com todos os leads de usuário
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Lead'
+        '500':
+          description: Erro ao obter a lista de leads
+    post:
+      tags:
+        - Lead
+      summary: Cria um lead do usuário
+      operationId: 0269fc659827ad5bbdcde3393b59309b
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LeadInput'
+      responses:
+        '201':
+          description: Lead de usuário criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lead'
+        '400':
+          description: Erro de validação
+        '500':
+          description: Erro ao criar lead
+
+  /api/images:
+    get:
+      tags:
+        - Images
+      summary: Lista um array com a galeria de imagens e seus nomes
+      operationId: ed509b9d131a64e29eb74abcffb6f579
+      responses:
+        '200':
+          description: Array de imagens
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    url:
+                      type: string
+
+components:
+  schemas:
+    Lead:
+      type: object
+      properties:
+        nome:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        estado:
+          type: string
+        cidade:
+          type: string
+        mensagem:
+          type: string
+
+    LeadInput:
+      type: object
+      properties:
+        nome:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        estado:
+          type: string
+        cidade:
+          type: string
+        mensagem:
+          type: string
