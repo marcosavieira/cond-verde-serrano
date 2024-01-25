@@ -1,4 +1,4 @@
-CREATE TABLE `leads_usuario` (
+CREATE TABLE `lead_usuario` (
   `id` integer PRIMARY KEY,
   `nome` varchar(255),
   `email` varchar(255),
