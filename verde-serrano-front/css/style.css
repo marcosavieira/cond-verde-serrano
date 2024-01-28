@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100vh;
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-half {
+    object-position: center bottom; 
+    height: 60vh; 
+    width: 100%; 
+    object-fit: cover; 
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
